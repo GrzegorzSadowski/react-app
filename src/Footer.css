@@ -1,0 +1,7 @@
+.Footer {
+    grid-row: 4/5;
+    text-align: center;
+    align-self: center;
+    background-color: #424853;
+    color: red;
+}

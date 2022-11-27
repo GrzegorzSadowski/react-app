@@ -1,0 +1,15 @@
+body {
+  margin: -1px -1px -1px -1px;
+  
+
+  /* background: white; */
+}
+
+
+#root {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 50px auto 400px 50px ;
+  height: 100vh;
+}
+
