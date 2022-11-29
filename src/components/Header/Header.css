@@ -1,0 +1,11 @@
+.Header {
+    display: grid;
+    grid-row: 1/2;
+    justify-items: left;
+    align-items: center;
+    background-color: #282c34;
+    color: red;
+    margin: 0;
+    padding-left: 1rem;
+  }
+  
