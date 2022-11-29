@@ -1,0 +1,9 @@
+.Footer {
+    grid-row: 3/4;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    background-color: #424853;
+    color: red;
+    
+}
