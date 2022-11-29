@@ -1,10 +1,10 @@
 import React from "react";
-import PageNotFound from "./components/NotFoundPage/NotFoundPage";
+import NotFoundPage from "./components/NotFoundPage/NotFoundPage";
 
  function App() {
     return (
         <>
-            <PageNotFound />
+            <NotFoundPage />
         </>
     );
 }
