@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../Header/Header";
-import MainContent from "../MainContent/MainContent";
+import NotFoundPageContent from "../NotFoundPageContent/NotFoundPageContent";
 import Footer from "../Footer/Footer.jsx";
 import './NotFoundPage.css' 
 
@@ -8,7 +8,7 @@ import './NotFoundPage.css'
     return (
         <div className="container">
             <Header />
-            <MainContent />
+            <NotFoundPageContent />
             <Footer />
         </div>
     );
