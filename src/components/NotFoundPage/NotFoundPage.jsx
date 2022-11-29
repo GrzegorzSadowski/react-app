@@ -4,7 +4,7 @@ import NotFoundPageContent from "../NotFoundPageContent/NotFoundPageContent";
 import Footer from "../Footer/Footer.jsx";
 import './NotFoundPage.css' 
 
- const PageNotFound = () => {
+ const NotFoundPage = () => {
     return (
         <div className="container">
             <Header />
@@ -13,4 +13,4 @@ import './NotFoundPage.css'
         </div>
     );
 }
-export default PageNotFound;
+export default NotFoundPage;
