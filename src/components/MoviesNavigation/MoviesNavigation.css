@@ -1,0 +1,39 @@
+.MoviesNavigation--Container {
+  box-sizing: content-box;
+  display: grid;
+  background-color: #232323;
+  grid-template-rows: 60px;
+}
+.MoviesNavigation--Navigation {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid;
+  border-color: #555555;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #ffffff;
+}
+
+.MoviesNavigation--Filter {
+  display: flex;
+}
+.MoviesNavigation--Sort {
+  display: flex;
+}
+
+.MoviesNavigation--Navigation--Text {
+  padding: 0px 10px 0px 10px;
+}
+.Triangle {
+  width: 0px;
+  height: 0px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #f65261;
+  margin-top: 27px;
+}
+.Red {
+  border-bottom: solid;
+  border-color: #f65261;
+  margin-bottom: -2.5px;
+}

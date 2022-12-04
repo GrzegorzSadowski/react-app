@@ -1,0 +1,23 @@
+.SearchResultsContent--Container {
+  box-sizing: border-box;
+  display: grid;
+  background-color: #232323;
+  grid-template-rows: 60px 60px auto;
+}
+
+.SearchResultsContent--Navigation {
+  grid-row: 1/2;
+}
+.SearchResultsContent--Results {
+  grid-row: 2/3;
+  margin-left: 20px;
+  color: #ffffff;
+}
+.SearchResultsContent--Content {
+  grid-row: 3/4;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 50% 50%;
+  justify-items: center;
+  color: #ffffff;
+}

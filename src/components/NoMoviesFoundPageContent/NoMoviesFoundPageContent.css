@@ -1,0 +1,12 @@
+.NoMoviesFoundPageContent--Container {
+  display: grid;
+  background-color: #232323;
+  grid-template-rows: 60px auto;
+}
+
+.NoMoviesFoundPageContent--Content {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

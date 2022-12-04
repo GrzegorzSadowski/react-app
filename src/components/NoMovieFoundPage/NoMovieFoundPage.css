@@ -1,0 +1,7 @@
+.NoMovieFoundPage-Container {
+  box-sizing: border-box;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 2fr 3fr 60px;
+  background-color: #424242;
+}

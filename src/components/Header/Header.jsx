@@ -1,5 +1,5 @@
-import './Header.css';
-import Name from '../Name/Name';
+import "./Header.css";
+import Name from "../Name/Name";
 
 function Header() {
   return (

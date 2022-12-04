@@ -1,5 +1,6 @@
-.container {
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 60px auto 60px;
-  }
+.NotFoundPage--Container {
+  box-sizing: border-box;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 60px auto 60px;
+}
