@@ -1,16 +1,15 @@
-import './Footer.css';
-import Name from '../Name/Name';
-import React from 'react';
-
+import "./footer.css";
+import Name from "../Name/Name";
+import React from "react";
 
 class Footer extends React.PureComponent {
   render() {
     return (
-    <footer className="Footer">
+      <footer className="footer">
         <Name />
-    </footer>
-    )
-  };
+      </footer>
+    );
+  }
 }
 
 export default Footer;
