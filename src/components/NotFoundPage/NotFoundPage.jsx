@@ -2,15 +2,15 @@ import React from "react";
 import Header from "../Header/Header";
 import NotFoundPageContent from "../NotFoundPageContent/NotFoundPageContent";
 import Footer from "../Footer/Footer.jsx";
-import './NotFoundPage.css' 
+import "./notFoundPage.css";
 
- const NotFoundPage = () => {
-    return (
-        <div className="container">
-            <Header />
-            <NotFoundPageContent />
-            <Footer />
-        </div>
-    );
-}
+const NotFoundPage = () => {
+  return (
+    <div className="notFoundPage--container">
+      <Header showButton={false} />
+      <NotFoundPageContent />
+      <Footer />
+    </div>
+  );
+};
 export default NotFoundPage;

@@ -1,10 +1,17 @@
-import './Header.css';
-import Name from '../Name/Name';
+import "./header.css";
+import Name from "../Name/Name";
 
-function Header() {
+function Header({ showButton }) {
   return (
-    <header className="Header">
+    <header className="header">
       <Name />
+      {showButton && (
+        <a href="#" target="blank">
+          <button type="button" className="header--button">
+            + ADD MOVIE
+          </button>
+        </a>
+      )}
     </header>
   );
 }

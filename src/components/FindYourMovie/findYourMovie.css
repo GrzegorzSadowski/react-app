@@ -1,0 +1,49 @@
+.findYourMovie--container {
+  background-image: url(../../images/netflix_background.jpg);
+  background-size: cover;
+  display: grid;
+  grid-template-rows: 60px auto;
+  border-bottom: solid;
+  border-width: 5px;
+  border-color: #555555;
+}
+
+.findYourMovie--content {
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  padding-left: 4rem;
+  padding-bottom: 1rem;
+}
+
+.findYourMovie--paragraph {
+  display: flex;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.findYourMovie--form {
+  display: grid;
+}
+
+.findYourMovie--placeholder {
+  grid-column: 1/2;
+  font-size: 1.5rem;
+  background-color: #555555;
+  padding: 10px 200px 10px 10px;
+  margin-right: 2rem;
+  border: none;
+  border-radius: 5px;
+}
+.findYourMovie--button {
+  grid-column: 2/3;
+  font-size: 1.5rem;
+  background-color: #f65261;
+  padding: 10px 10px 10px 10px;
+  margin-right: 1.5rem;
+  border: none;
+  color: #ffffff;
+  margin-left: -10px;
+  border-radius: 5px;
+}
