@@ -6,6 +6,7 @@
   border-bottom: solid;
   border-width: 5px;
   border-color: #555555;
+  position: relative;
 }
 
 .findYourMovie--content {

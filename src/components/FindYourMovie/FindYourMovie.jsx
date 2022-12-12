@@ -5,7 +5,7 @@ import Header from "../Header/Header";
 
 const FindYourMovie = () => {
   return (
-    <div className="findYourMovie--container">
+    <div className="findYourMovie--container" id="findYourMovie--container">
       <Header showButton={true} />
 
       <div className="findYourMovie--content">

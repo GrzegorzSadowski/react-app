@@ -1,0 +1,58 @@
+.dots-container {
+  background-color: #232323;
+  position: absolute;
+  top: 5px;
+  right: 40px;
+  cursor: pointer;
+  padding-left: 0px;
+  display: none;
+}
+
+.dots-image {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.dots--button--x {
+  color: #ffffff;
+  background-color: #232323;
+  font-size: 20px;
+  margin-left: 150px;
+}
+
+.dots-button {
+  cursor: pointer;
+  background-color: unset;
+  border: 0;
+  position: absolute;
+}
+
+.dots-dropdown {
+  background-color: #232323;
+  position: absolute;
+  top: -15px;
+  right: -35px;
+  size: 100px;
+  list-style: none;
+  padding-left: 0px;
+}
+
+.dots-dropdown > li {
+  cursor: pointer;
+  background-color: #232323;
+}
+
+.dots-dropdown > li:hover {
+  background-color: #f65261;
+}
+
+.dots-dropdown > li > button {
+  cursor: pointer;
+  font-size: 20px;
+  width: 180px;
+  color: #ffffff;
+  background-color: unset;
+  border: 0;
+  text-align: left;
+}

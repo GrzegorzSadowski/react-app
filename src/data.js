@@ -13,7 +13,8 @@
         img: "../../images/img2.jpg",
         title: "Bohemian Rapsody",
         released: "2001",
-        genre: "Drama"  
+        genre: "Drama" ,
+        url: null, 
     },
 
     {
@@ -47,6 +48,7 @@
         released: "2022",
         genre: "Comedy"  
         },
+        
         {
             id: 7,
             img: "../../images/img7.jpg",
