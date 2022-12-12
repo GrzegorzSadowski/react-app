@@ -4,9 +4,9 @@ import "./searchResults.css";
 import Dots from "../Dots/Dots";
 
 const SearchResults = (props) => {
-  const { item } = props;
+  const { item, setActiveFilm } = props;
   return (
-    <div className="searchResults--card">
+    <div className="searchResults--card" onClick={setActiveFilm}>
       <img src={item.img} className="searchResults--img" />
       <Dots />
       <div className="searchResults--description">

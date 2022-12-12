@@ -1,4 +1,4 @@
-.NotFoundPageContent {
+.notFoundPageContent {
   grid-row: 2/3;
   background-color: #282c34;
   flex-direction: column;
@@ -9,8 +9,8 @@
   color: white;
 }
 
-.NotFoundPageContent--button {
-  background-color: #282c34;;
+.notFoundPageContent--button {
+  background-color: #282c34;
   border: solid;
   color: red;
   padding: 15px 15px;
@@ -18,6 +18,6 @@
   font-size: 20px;
   cursor: pointer;
 }
-.NotFoundPageContent--img {
-padding: 2rem 0rem 3rem 0rem;
+.notFoundPageContent--img {
+  padding: 2rem 0rem 3rem 0rem;
 }

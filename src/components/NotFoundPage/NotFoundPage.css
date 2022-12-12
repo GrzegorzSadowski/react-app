@@ -1,5 +1,7 @@
-.container {
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 60px auto 60px;
-  }
+.notFoundPage--container {
+  box-sizing: border-box;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 60px auto 60px;
+  background-color: #282c34;
+}

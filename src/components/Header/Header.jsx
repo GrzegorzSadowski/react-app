@@ -32,15 +32,11 @@ class Header extends React.Component {
           </button>
         )}
 
-        {this.state.showModal &&
-          ReactDOM.createPortal(
+        {this.state.showModal && <AddMovie />
             <Modal
               handleCloseModalClick={this.handleCloseModalClick}
               showAddMovie={true}
-              showEditMovie={false}
-              showDeleteMovie={false}
-            />,
-            document.getElementById("findYourMovie--container")
+            />
           )}
       </header>
     );
