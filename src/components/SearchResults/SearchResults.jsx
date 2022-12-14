@@ -1,12 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./searchResults.css";
+import Dots from "../Dots/Dots";
 
 const SearchResults = (props) => {
   const { item } = props;
   return (
     <div className="searchResults--card">
-      <img src={item.img} className="searchResults--img" />
+      <img src={item.img} className="searchResults--img" alt="" />
+      <Dots item={item} />
       <div className="searchResults--description">
         <span className="searchResults--title">{item.title}</span>
         <span className="searchResults--released">{item.released}</span>

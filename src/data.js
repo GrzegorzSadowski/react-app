@@ -4,8 +4,11 @@
         id: 1,
         img: "../../images/img1.jpg",
         title: "Pulp Fiction",
-        released: "2004",
-        genre: "Action and adventure"
+        released: "01-Dec-22",
+        genre: "Action and adventure",
+        url: null,
+        overview: null,
+        runtime: null
     },
 
     {
@@ -13,7 +16,10 @@
         img: "../../images/img2.jpg",
         title: "Bohemian Rapsody",
         released: "2001",
-        genre: "Drama"  
+        genre: "Drama" ,
+        url: null,
+        overview: null,
+        runtime: null
     },
 
     {
@@ -21,7 +27,10 @@
         img: "../../images/img3.jpg",
         title: "Kill Bill",
         released: "2021",
-        genre: "Oscar winning movie"  
+        genre: "Oscar winning movie" ,
+        url: null,
+        overview: null,
+        runtime: null 
     },
 
     {
@@ -29,7 +38,10 @@
         img: "../../images/img4.jpg",
         title: "Avengers",
         released: "2022",
-        genre: "Action"  
+        genre: "Action"  ,
+        url: null,
+        overview: null,
+        runtime: null
     },
 
     {
@@ -37,7 +49,10 @@
         img: "../../images/img5.jpg",
         title: "Inception",
         released: "2002",
-        genre: "Adventure"  
+        genre: "Adventure" ,
+        url: null,
+        overview: null,
+        runtime: null 
     },
 
     {
@@ -45,21 +60,31 @@
         img: "../../images/img6.jpg",
         title: "Dogs",
         released: "2022",
-        genre: "Comedy"  
+        genre: "Comedy" ,
+        url: null,
+        overview: null,
+        runtime: null 
+        },
+        
+        {
+        id: 7,
+        img: "../../images/img7.jpg",
+        title: "Inception",
+        released: "2002",
+        genre: "Adventure"  ,
+        url: null,
+        overview: null,
+        runtime: null
         },
         {
-            id: 7,
-            img: "../../images/img7.jpg",
-            title: "Inception",
-            released: "2002",
-            genre: "Adventure"  
-        },
-        {
-            id: 8,
-            img: "../../images/img8.jpg",
-            title: "Inception",
-            released: "2002",
-            genre: "Adventure"  
+        id: 8,
+        img: "../../images/img8.jpg",
+        title: "Inception",
+        released: "2002",
+        genre: "Adventure"  ,
+        url: null,
+        overview: null,
+        runtime: null
         }
 
 
