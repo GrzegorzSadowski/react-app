@@ -3,12 +3,7 @@ import React, { useState } from "react";
 import Modal from "../Modal/Modal";
 
 const AddMovie = (props) => {
-  const { onClose, films, setFilms, len } = props;
-
-  const handleAdd = (film) => {
-    const addedFilms = films.concat(film);
-    setFilms(addedFilms);
-  };
+  const { onClose, setFilms } = props;
 
   const [film, setFilm] = useState({
     id: null,
@@ -24,7 +19,7 @@ const AddMovie = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    handleAdd(film);
+    setFilms(film);
   };
 
   const handleInputChange = (event) => {
@@ -32,8 +27,6 @@ const AddMovie = (props) => {
     setFilm({
       ...film,
       [event.target.name]: event.target.value,
-      id: len + 1,
-      key: len + 1,
     });
   };
 

@@ -4,7 +4,7 @@ import Name from "../Name/Name";
 import AddMovie from "../AddMovie/AddMovie";
 
 const Header = (props) => {
-  const { showButton, showMagnifier, films, setFilms, len, setIsFilmActive } =
+  const { showButton, showMagnifier, setFilms, setActiveFilm } =
     props;
 
   const [showModal, setShowModal] = useState(false);
@@ -18,7 +18,7 @@ const Header = (props) => {
   };
 
   const handleIsFilmActive = () => {
-    setIsFilmActive(false);
+    setActiveFilm(null);
   };
 
   return (
@@ -39,9 +39,7 @@ const Header = (props) => {
       {showModal && (
         <AddMovie
           onClose={handleCloseModalClick}
-          films={films}
           setFilms={setFilms}
-          len={len}
         />
       )}
     </header>

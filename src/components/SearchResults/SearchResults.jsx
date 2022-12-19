@@ -8,12 +8,10 @@ const SearchResults = (props) => {
     item,
     /*onChange, onDelete,*/ films,
     setFilms,
-    setIsFilmActive,
     setActiveFilm,
   } = props;
 
   const handleIsFilmActive = () => {
-    setIsFilmActive(true);
     setActiveFilm(item);
     console.log(item);
   };
