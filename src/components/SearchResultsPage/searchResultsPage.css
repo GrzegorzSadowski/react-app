@@ -2,6 +2,6 @@
   display: grid;
   box-sizing: border-box;
   height: 100vh;
-  grid-template-rows: 1fr 3fr 60px;
+  grid-template-rows: 300px 1fr 60px;
   background-color: #424242;
 }

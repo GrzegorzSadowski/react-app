@@ -1,0 +1,102 @@
+.modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 998;
+  background-color: #232323;
+  opacity: 0.6;
+}
+
+.modal--button--x {
+  background-color: #232323;
+  color: #ffffff;
+  font-size: 20px;
+  justify-self: right;
+  margin-left: 100px;
+}
+
+.modal--container {
+  display: grid;
+  width: 500px;
+  height: auto;
+  background-color: #232323;
+  position: absolute;
+  top: 100px;
+  right: 50%;
+  margin-right: -200px;
+  z-index: 999;
+  padding-bottom: 50px;
+}
+.insidemodal--container {
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal--title {
+  color: rgb(133, 133, 133);
+}
+
+.modal--label {
+  color: #f65261;
+  font-size: 16px;
+}
+
+.modal--input {
+  margin-bottom: 20px;
+  margin-top: 5px;
+  background-color: #424242;
+  color: #ffffff;
+  border: none;
+  border-radius: 2px;
+  font-size: 20px;
+  width: 300px;
+}
+.modal--select {
+  margin-top: 5px;
+  background-color: #424242;
+  color: rgb(133, 133, 133);
+  border: none;
+  border-radius: 2px;
+  font-size: 20px;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.modal--reset {
+  background-color: #232323;
+  color: #f65261;
+  font-size: 20px;
+  border-color: #f65261;
+  border-radius: 2px;
+  width: 110px;
+}
+
+.modal--buttons {
+  justify-self: right;
+}
+
+.modal--submit {
+  background-color: #f65261;
+  color: #ffffff;
+  font-size: 20px;
+  margin-left: 10px;
+  border-radius: 2px;
+  width: 110px;
+  border-color: #f65261;
+}
+.modal--movieID {
+  margin-top: 5px;
+  margin-bottom: 0px;
+  background-color: #232323;
+  color: #ffffff;
+  border: none;
+  border-radius: 2px;
+  font-size: 20px;
+  width: 300px;
+}
+
+.modal--text {
+  font-size: 18px;
+  color: #ffffff;
+}
