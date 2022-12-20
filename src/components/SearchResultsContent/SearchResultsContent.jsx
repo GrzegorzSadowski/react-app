@@ -4,9 +4,35 @@ import MoviesNavigation from "../MoviesNavigation/MoviesNavigation";
 import SearchResults from "../SearchResults/SearchResults";
 import dataArray from "../../data";
 
-function SearchResultsContent() {
-  const searchResults = dataArray.map((item) => {
-    return <SearchResults key={item.id} item={item} />;
+function SearchResultsContent(props) {
+  const { films, setFilms, setActiveFilm } = props;
+
+  //const handleChange = (film) => {
+  //  const updatedFilms = films.map((filmItem) => {
+  //    return film.id === filmItem.id ? film : filmItem;
+  //  });
+  //  setFilms(updatedFilms);
+  //  console.log("updated");
+  //};
+
+  //const handleDelete = (id) => {
+  //  const deletedFilms = films.filter((film) => film.id !== id);
+  //  setFilms(deletedFilms);
+  //  console.log("deleted");
+  //};
+
+  const searchResults = films.map((item) => {
+    return (
+      <SearchResults
+        key={item.id}
+        item={item}
+        //onChange={handleChange}
+        //onDelete={handleDelete}
+        films={films}
+        setFilms={setFilms}
+        setActiveFilm={setActiveFilm}
+      />
+    );
   });
 
   return (
@@ -14,7 +40,7 @@ function SearchResultsContent() {
       <div className="searchResultsContent--navigation">
         <MoviesNavigation />
       </div>
-      <h3 className="searchResultsContent--results">32 movies found</h3>
+      <h3 className="searchResultsContent--results">{films.length}</h3>
       <div className="searchResultsContent--content">{searchResults}</div>
     </div>
   );

@@ -1,12 +1,13 @@
 import React from "react";
 import "./findYourMovie.css";
-import Name from "../Name/Name";
 import Header from "../Header/Header";
 
-const FindYourMovie = () => {
+const FindYourMovie = (props) => {
+  const {   setFilms } = props;
+
   return (
-    <div className="findYourMovie--container">
-      <Header showButton={true} />
+    <div className="findYourMovie--container" id="findYourMovie--container">
+      <Header showButton={true} setFilms={setFilms} />
 
       <div className="findYourMovie--content">
         <p className="findYourMovie--paragraph">FIND YOUR MOVIE</p>
