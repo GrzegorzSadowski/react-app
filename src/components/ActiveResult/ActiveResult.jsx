@@ -2,11 +2,11 @@ import "./ActiveResult.css";
 import Header from "../Header/Header";
 
 const ActiveResult = (props) => {
-  const { setIsFilmActive, activeFilm } = props;
+  const { setActiveFilm, activeFilm } = props;
 
   return (
     <div className="activeResult--container">
-      <Header showMagnifier={true} setIsFilmActive={setIsFilmActive} />
+      <Header showMagnifier={true} setActiveFilm={setActiveFilm} />
       <img src={activeFilm.img} className="activeResult--img" alt="" />
       <div className="activeResult--title">
         <h1>{activeFilm.title}</h1>

@@ -5,7 +5,7 @@ import SearchResults from "../SearchResults/SearchResults";
 import dataArray from "../../data";
 
 function SearchResultsContent(props) {
-  const { films, setFilms, setIsFilmActive, setActiveFilm } = props;
+  const { films, setFilms, setActiveFilm } = props;
 
   //const handleChange = (film) => {
   //  const updatedFilms = films.map((filmItem) => {
@@ -30,7 +30,6 @@ function SearchResultsContent(props) {
         //onDelete={handleDelete}
         films={films}
         setFilms={setFilms}
-        setIsFilmActive={setIsFilmActive}
         setActiveFilm={setActiveFilm}
       />
     );
