@@ -7,6 +7,7 @@ import Dots from "./components/Dots/Dots";
 import Header from "./components/Header/Header";
 
 function App() {
+
     return (
         <ErrorBoundary>
             <SearchResultsPage />

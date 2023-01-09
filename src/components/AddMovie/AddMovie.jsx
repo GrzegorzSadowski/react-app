@@ -1,25 +1,47 @@
 import "../Modal/modal.css";
 import React, { useState } from "react";
 import Modal from "../Modal/Modal";
+import { useDispatch } from "react-redux";
+import { nanoid } from "@reduxjs/toolkit";
+import { addMovie } from "../../redux/movieSlice";
 
 const AddMovie = (props) => {
-  const { onClose, setFilms } = props;
+  const { onClose } = props;
+  const dispatch = useDispatch();
 
   const [film, setFilm] = useState({
-    id: null,
-    key: null,
-    title: null,
-    url: null,
-    genre: null,
-    overview: null,
-    released: null,
-    runtime: null,
-    img: "../../images/img1.jpg",
+    id: "",
+    key: "",
+    title: "",
+    url: "",
+    genres: "",
+    overview: "",
+    releaseDate: "",
+    runtime: "",
+    posterPath: "",
+    tagline: "",
+    voteAverage: "",
+    voteCount: "",
+    budget: "",
+    revenue: "",
   });
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setFilms(film);
+    const random = nanoid();
+
+    dispatch(
+      addMovie({
+        id: random,
+        title: film.title,
+        key: random,
+        releaseDate: film.releaseDate,
+        genres: [film.genres],
+        runtime: film.runtime,
+        posterPath: film.posterPath,
+        overview: film.overview,
+      })
+    );
   };
 
   const handleInputChange = (event) => {
@@ -32,13 +54,21 @@ const AddMovie = (props) => {
 
   const handleReset = () => {
     setFilm({
-      ...film,
-      title: null,
-      url: null,
-      genre: null,
-      overview: null,
-      released: null,
-      runtime: null,
+      id: "",
+      key: "",
+      title: "",
+      url: "",
+      genres: "",
+      overview: "",
+      releaseDate: "",
+      runtime: "",
+      posterPath:
+        "https://image.tmdb.org/t/p/w500/tWqifoYuwLETmmasnGHO7xBjEtt.jpg",
+      tagline: "",
+      voteAverage: "",
+      voteCount: "",
+      budget: "",
+      revenue: "",
     });
   };
 
@@ -71,10 +101,10 @@ const AddMovie = (props) => {
         </label>
         <br></br>
         <input
-          value={film.released}
+          value={film.releaseDate}
           type="data"
           className="modal--input"
-          name="released"
+          name="releaseDate"
           onChange={handleInputChange}
           placeholder="Select date"
           onFocus={(e) => (e.target.type = "date")}
@@ -88,30 +118,32 @@ const AddMovie = (props) => {
         <input
           type="text"
           className="modal--input"
-          name="url"
-          value={film.url}
+          name="posterPath"
+          value={film.posterPath}
           onChange={handleInputChange}
           placeholder="Movie URL here"
         />
         <br></br>
-        <label htmlFor="genre" className="modal--label">
+        <label htmlFor="genres" className="modal--label">
           GENRE
         </label>
         <br></br>
-        <select
-          className="modal--select"
-          name="genre"
-          onChange={handleInputChange}
-          value={film.genre}
-        >
-          <option value="Select genre" disabled selected>
-            Select genre
-          </option>
-          <option className="addMovie--option--genre">Crime</option>
-          <option className="addMovie--option--genre">Documentary</option>
-          <option className="addMovie--option--genre">Horror</option>
-          <option className="addMovie--option--genre">Comedy</option>
-        </select>
+        {
+          <select
+            className="modal--select"
+            name="genres"
+            onChange={handleInputChange}
+            value={film.genres}
+            multiple={false}
+          >
+            <option className="addMovie--option--genre">Select genre</option>
+            <option className="addMovie--option--genre">Crime</option>
+            <option className="addMovie--option--genre">Documentary</option>
+            <option className="addMovie--option--genre">Horror</option>
+            <option className="addMovie--option--genre">Comedy</option>
+          </select>
+        }
+
         <br></br>
         <label htmlFor="overview" className="modal--label">
           OVERVIEW

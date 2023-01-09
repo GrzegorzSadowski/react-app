@@ -5,7 +5,7 @@ import DeleteMovie from "../DeleteMovie/DeleteMovie";
 import EditMovie from "../EditMovie/EditMovie";
 
 const Dots = (props) => {
-  const { item, /*onChange, onDelete,*/ films, setFilms } = props;
+  const { item } = props;
   const [showDropdown, setShowDropdown] = useState(false);
   const [showEdit, setShowEdit] = useState(false);
   const [showDelete, setShowDelete] = useState(false);
@@ -56,24 +56,10 @@ const Dots = (props) => {
         </ul>
       )}
 
-      {showEdit && (
-        <EditMovie
-          item={item}
-          onClose={handleCloseModalClick}
-          //onChange={onChange}
-          films={films}
-          setFilms={setFilms}
-        />
-      )}
+      {showEdit && <EditMovie item={item} onClose={handleCloseModalClick} />}
 
       {showDelete && (
-        <DeleteMovie
-          id={item.id}
-          onClose={handleCloseModalClick}
-          //onDelete={onDelete}
-          films={films}
-          setFilms={setFilms}
-        />
+        <DeleteMovie id={item.id} onClose={handleCloseModalClick} />
       )}
     </div>
   );
