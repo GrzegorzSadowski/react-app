@@ -4,12 +4,7 @@ import "./searchResults.css";
 import Dots from "../Dots/Dots";
 
 const SearchResults = (props) => {
-  const {
-    item,
-    /*onChange, onDelete,*/ films,
-    setFilms,
-    setActiveFilm,
-  } = props;
+  const { item, setActiveFilm } = props;
 
   const handleIsFilmActive = () => {
     setActiveFilm(item);
@@ -19,23 +14,19 @@ const SearchResults = (props) => {
   return (
     <div className="searchResults--card">
       <img
-        src={item.img}
+        src={item.posterPath}
         className="searchResults--img"
         alt=""
         onClick={handleIsFilmActive}
       />
-      <Dots
-        item={item}
-        //onChange={onChange}
-        //onDelete={onDelete}
-        films={films}
-        setFilms={setFilms}
-      />
+      <Dots item={item} />
       <div className="searchResults--description">
         <span className="searchResults--title">{item.title}</span>
-        <span className="searchResults--released">{item.released}</span>
+        <span className="searchResults--released">
+          {item.releaseDate.slice(0, 4)}
+        </span>
       </div>
-      <p className="searchResults--genre">{item.genre}</p>
+      <p className="searchResults--genre">{item.genres.join(" ")}</p>
     </div>
   );
 };

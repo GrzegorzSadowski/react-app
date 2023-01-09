@@ -2,11 +2,12 @@
   background-image: url(../../images/netflix_background.jpg);
   background-size: cover;
   display: grid;
-  grid-template-rows: 60px 300px;
+  grid-template-rows: 60px auto;
   border-bottom: solid;
   border-width: 5px;
   border-color: #555555;
   position: relative;
+  z-index: 1;
 }
 
 .findYourMovie--content {
@@ -15,7 +16,6 @@
   flex-direction: column;
   justify-self: center;
   padding-left: 4rem;
-  padding-bottom: 1rem;
 }
 
 .findYourMovie--paragraph {

@@ -1,46 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import "./searchResultsContent.css";
 import MoviesNavigation from "../MoviesNavigation/MoviesNavigation";
 import SearchResults from "../SearchResults/SearchResults";
-import dataArray from "../../data";
+import { useSelector, useDispatch } from "react-redux";
+import { getMovies } from "../../redux/movieSlice";
+import { selectAllMovies } from "../../redux/movieSlice";
 
 function SearchResultsContent(props) {
-  const { films, setFilms, setActiveFilm } = props;
+  const [filterValue, setFilterValue] = useState("All");
+  const { setActiveFilm } = props;
 
-  //const handleChange = (film) => {
-  //  const updatedFilms = films.map((filmItem) => {
-  //    return film.id === filmItem.id ? film : filmItem;
-  //  });
-  //  setFilms(updatedFilms);
-  //  console.log("updated");
-  //};
+  const dispatch = useDispatch();
 
-  //const handleDelete = (id) => {
-  //  const deletedFilms = films.filter((film) => film.id !== id);
-  //  setFilms(deletedFilms);
-  //  console.log("deleted");
-  //};
+  React.useEffect(() => {
+    dispatch(getMovies());
+  }, []);
 
-  const searchResults = films.map((item) => {
+  const movies = useSelector(selectAllMovies);
+
+  const filter = (movies, filterValue) => {
+    return filterValue === "All"
+      ? movies
+      : movies.filter((mov) => mov.genres.includes(filterValue));
+  };
+  const moviesFiltered = filter(movies, filterValue);
+
+  const searchResults = moviesFiltered.map((item) => {
     return (
-      <SearchResults
-        key={item.id}
-        item={item}
-        //onChange={handleChange}
-        //onDelete={handleDelete}
-        films={films}
-        setFilms={setFilms}
-        setActiveFilm={setActiveFilm}
-      />
+      <SearchResults key={item.id} item={item} setActiveFilm={setActiveFilm} />
     );
   });
 
   return (
     <div className="searchResultsContent--container">
       <div className="searchResultsContent--navigation">
-        <MoviesNavigation />
+        <MoviesNavigation setFilterValue={setFilterValue} />
       </div>
-      <h3 className="searchResultsContent--results">{films.length}</h3>
+      <h3 className="searchResultsContent--results">{moviesFiltered.length}</h3>
       <div className="searchResultsContent--content">{searchResults}</div>
     </div>
   );

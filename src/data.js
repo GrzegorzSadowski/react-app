@@ -18,7 +18,7 @@
     {
         id: 2,
         key: 2,
-        img: "../../images/img2.jpg",
+        img: "https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg",
         title: "Bohemian Rapsody",
         released: "2001",
         genre: "Drama" ,

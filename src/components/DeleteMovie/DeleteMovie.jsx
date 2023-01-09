@@ -1,18 +1,15 @@
 import React, { useState } from "react";
 import Modal from "../Modal/Modal";
+import { useDispatch } from "react-redux";
+import { deleteMovie } from "../../redux/movieSlice";
 
 const DeleteMovie = (props) => {
-  const { onClose, /*onDelete,*/ id, films, setFilms } = props;
-
-  const handleDelete = (id) => {
-    const deletedFilms = films.filter((film) => film.id !== id);
-    setFilms(deletedFilms);
-    console.log("deleted");
-  };
+  const { onClose, id } = props;
+  const dispatch = useDispatch();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    handleDelete(id);
+    dispatch(deleteMovie(id));
     console.log(id);
   };
 

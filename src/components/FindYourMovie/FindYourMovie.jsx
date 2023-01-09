@@ -3,7 +3,7 @@ import "./findYourMovie.css";
 import Header from "../Header/Header";
 
 const FindYourMovie = (props) => {
-  const {   setFilms } = props;
+  const { setFilms } = props;
 
   return (
     <div className="findYourMovie--container" id="findYourMovie--container">

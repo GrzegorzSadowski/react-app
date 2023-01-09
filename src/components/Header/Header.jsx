@@ -4,8 +4,7 @@ import Name from "../Name/Name";
 import AddMovie from "../AddMovie/AddMovie";
 
 const Header = (props) => {
-  const { showButton, showMagnifier, setFilms, setActiveFilm } =
-    props;
+  const { showButton, showMagnifier, setActiveFilm } = props;
 
   const [showModal, setShowModal] = useState(false);
 
@@ -36,12 +35,7 @@ const Header = (props) => {
         </button>
       )}
 
-      {showModal && (
-        <AddMovie
-          onClose={handleCloseModalClick}
-          setFilms={setFilms}
-        />
-      )}
+      {showModal && <AddMovie onClose={handleCloseModalClick} />}
     </header>
   );
 };
