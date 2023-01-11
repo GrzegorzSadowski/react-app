@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import "./moviesNavigation.css";
 import { useDispatch } from "react-redux";
 import { sortMovie } from "../../redux/movieSlice";
+import classnames from "classnames";
 
 function MoviesNavigation(props) {
   const { setFilterValue } = props;
-  const [buttonsColors, setButtonsColors] = useState([1, 0, 0, 0, 0]);
+  const [buttonActiveName, setButtonActiveName] = useState("All");
 
   const dispatch = useDispatch();
+
   const handleInputChange = (event) => {
     event.preventDefault();
     dispatch(sortMovie(event.target.value));
@@ -15,23 +17,7 @@ function MoviesNavigation(props) {
 
   const handleClick = (event) => {
     setFilterValue(event.target.value);
-    switch (event.target.value) {
-      case "All":
-        setButtonsColors([1, 0, 0, 0, 0]);
-        break;
-      case "Action":
-        setButtonsColors([0, 1, 0, 0, 0]);
-        break;
-      case "Drama":
-        setButtonsColors([0, 0, 1, 0, 0]);
-        break;
-      case "Horror":
-        setButtonsColors([0, 0, 0, 1, 0]);
-        break;
-      case "Crime":
-        setButtonsColors([0, 0, 0, 0, 1]);
-        break;
-    }
+    setButtonActiveName(event.target.value);
   };
 
   return (
@@ -39,42 +25,52 @@ function MoviesNavigation(props) {
       <div className="moviesNavigation--navigation">
         <div className="moviesNavigation--filter">
           <button
-            className="moviesNavigation--navigation--button "
+            className={classnames("moviesNavigation--navigation--button", {
+              "moviesNavigation--navigation--button-active":
+                buttonActiveName === "All",
+            })}
             value="All"
             onClick={handleClick}
-            style={{ color: buttonsColors[0] ? "#f65261" : "#ffffff" }}
           >
             ALL
           </button>
           <button
-            className="moviesNavigation--navigation--button"
+            className={classnames("moviesNavigation--navigation--button", {
+              "moviesNavigation--navigation--button-active":
+                buttonActiveName === "Action",
+            })}
             value="Action"
             onClick={handleClick}
-            style={{ color: buttonsColors[1] ? "#f65261" : "#ffffff" }}
           >
             ACTION
           </button>
           <button
-            className="moviesNavigation--navigation--button"
+            className={classnames("moviesNavigation--navigation--button", {
+              "moviesNavigation--navigation--button-active":
+                buttonActiveName === "Drama",
+            })}
             value="Drama"
             onClick={handleClick}
-            style={{ color: buttonsColors[2] ? "#f65261" : "#ffffff" }}
           >
             DRAMA
           </button>
           <button
-            className="moviesNavigation--navigation--button"
+            className={classnames("moviesNavigation--navigation--button", {
+              "moviesNavigation--navigation--button-active":
+                buttonActiveName === "Horror",
+            })}
             value="Horror"
             onClick={handleClick}
-            style={{ color: buttonsColors[3] ? "#f65261" : "#ffffff" }}
           >
             HORROR
           </button>
           <button
-            className="moviesNavigation--navigation--button"
+            className={classnames("moviesNavigation--navigation--button", {
+              "moviesNavigation--navigation--button-active":
+                buttonActiveName === "Crime",
+            })}
             value="Crime"
             onClick={handleClick}
-            style={{ color: buttonsColors[4] ? "#f65261" : "#ffffff" }}
           >
             CRIME
           </button>
