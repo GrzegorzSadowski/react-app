@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import {store} from './redux/store';
 import { Provider } from 'react-redux'; 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 
@@ -12,7 +13,11 @@ root.render(
   
   
     <Provider store = {store}>
-    <App />
+        <Router>
+            <Routes>
+                 <Route path="/*" element = {<App/>} />
+            </Routes>
+        </Router>
     </Provider>
   
 

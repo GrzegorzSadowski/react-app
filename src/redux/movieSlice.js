@@ -62,7 +62,7 @@ export const movieSlice = createSlice({
       
       
        
-     //return action.payload;
+     
        
         
     })
@@ -71,7 +71,8 @@ export const movieSlice = createSlice({
 
 export const {deleteMovie, updateMovie, addMovie, sortMovie} = movieSlice.actions
 
-
+export const selectMovieById = (state, movieId) =>
+state.movies.find(movie => movie.id === movieId);
 
 export const selectAllMovies = (state) => state.movies
 

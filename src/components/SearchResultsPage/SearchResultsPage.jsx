@@ -13,11 +13,8 @@ const SearchResultsPage = () => {
       className="searchResultsPage--container"
       id="searchResultsPage--container"
     >
-      {activeFilm ? (
-        <ActiveResult setActiveFilm={setActiveFilm} activeFilm={activeFilm} />
-      ) : (
-        <FindYourMovie />
-      )}
+      <FindYourMovie />
+
       <SearchResultsContent setActiveFilm={setActiveFilm} />
       <Footer />
     </div>

@@ -2,23 +2,27 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./searchResults.css";
 import Dots from "../Dots/Dots";
+import { Link } from "react-router-dom";
+import movieSlice from "../../redux/movieSlice";
 
 const SearchResults = (props) => {
   const { item, setActiveFilm } = props;
 
   const handleIsFilmActive = () => {
     setActiveFilm(item);
-    console.log(item);
+    // console.log(item);
   };
 
   return (
     <div className="searchResults--card">
-      <img
-        src={item.posterPath}
-        className="searchResults--img"
-        alt=""
-        onClick={handleIsFilmActive}
-      />
+      <Link to={"/movies/" + item.id}>
+        <img
+          src={item.posterPath}
+          className="searchResults--img"
+          alt=""
+          onClick={handleIsFilmActive}
+        />
+      </Link>
       <Dots item={item} />
       <div className="searchResults--description">
         <span className="searchResults--title">{item.title}</span>
