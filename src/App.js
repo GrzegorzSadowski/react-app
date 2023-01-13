@@ -1,7 +1,7 @@
 import React from "react";
 import SearchResultsPage from "./components/SearchResultsPage/SearchResultsPage";
 import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
-import { Routes, Route} from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import NotFoundPage from "./components/NotFoundPage/NotFoundPage";
 import ActiveResult from "./components/ActiveResult/ActiveResult";
 

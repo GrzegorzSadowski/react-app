@@ -8,7 +8,6 @@ const FindYourMovie = (props) => {
   return (
     <div className="findYourMovie--container" id="findYourMovie--container">
       <Header showButton={true} setFilms={setFilms} />
-
       <div className="findYourMovie--content">
         <p className="findYourMovie--paragraph">FIND YOUR MOVIE</p>
         <form className="findYourMovie--form">

@@ -24,7 +24,6 @@ const ActiveResult = () => {
       <div className="activeResult--genre">
         <h3>{activeFilm.genre}</h3>
       </div>
-
       <div className="activeResult--duration">
         <h2 className="activeResult--released">
           {activeFilm.releaseDate.slice(0, 4)}{" "}

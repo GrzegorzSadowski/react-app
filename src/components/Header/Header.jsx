@@ -4,7 +4,7 @@ import Name from "../Name/Name";
 import AddMovie from "../AddMovie/AddMovie";
 
 const Header = (props) => {
-  const { showButton, showMagnifier, setActiveFilm } = props;
+  const { showButton } = props;
 
   const [showModal, setShowModal] = useState(false);
 
@@ -16,19 +16,9 @@ const Header = (props) => {
     setShowModal(false);
   };
 
-  const handleIsFilmActive = () => {
-    setActiveFilm(null);
-  };
-
   return (
     <header className="header">
       <Name />
-      {showMagnifier && (
-        <button onClick={handleIsFilmActive} className="activeResult--button">
-          &#x2315;
-        </button>
-      )}
-
       {showButton && (
         <button onClick={handleOpenModalClick} className="header--button">
           + ADD MOVIE
