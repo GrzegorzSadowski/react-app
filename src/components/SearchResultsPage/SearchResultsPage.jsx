@@ -2,23 +2,16 @@ import React, { useState } from "react";
 import FindYourMovie from "../FindYourMovie/FindYourMovie";
 import SearchResultsContent from "../SearchResultsContent/SearchResultsContent";
 import Footer from "../Footer/Footer.jsx";
-import ActiveResult from "../ActiveResult/ActiveResult.jsx";
 import "./searchResultsPage.css";
 
 const SearchResultsPage = () => {
-  const [activeFilm, setActiveFilm] = useState(null);
-
   return (
     <div
       className="searchResultsPage--container"
       id="searchResultsPage--container"
     >
-      {activeFilm ? (
-        <ActiveResult setActiveFilm={setActiveFilm} activeFilm={activeFilm} />
-      ) : (
-        <FindYourMovie />
-      )}
-      <SearchResultsContent setActiveFilm={setActiveFilm} />
+      <FindYourMovie />
+      <SearchResultsContent />
       <Footer />
     </div>
   );
