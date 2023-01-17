@@ -40,29 +40,17 @@ expect(component.find("AddMovie").exists()).toBeTruthy;
 
 
 
-
-
 it("close modal window after close modal button is clicked", () =>
 {   
-const handleCloseModalClick = jest.fn()
-
 const component = shallow(<Header showButton={true} />);
 expect(component.find("AddMovie").exists()).toEqual(false);
 const button = component.find(".header--button");
 button.simulate("click");
-
 expect(component.find("AddMovie").exists()).toEqual(true);
-const modalButton = component.find("#modal--button");
-modalButton.simulate('click');
-expect(handleCloseModalClick).toHaveBeenCalledTimes(1);
+component.find("AddMovie").props().onClose()
+expect(component.find("AddMovie").exists()).toEqual(false);
 
 });
-
-
-
-
-
-
 
 
 
@@ -77,7 +65,7 @@ describe("passing props", ()=>{
 it("show button ADD MOVIE if showButton is true", () =>
 {
 const component = shallow(<Header showButton={true}/>);
-expect(component.find(".header--button").exists()).toBeTruthy;
+expect(component.find(".header--button").exists()).toEqual(true);
 });
 
 })
