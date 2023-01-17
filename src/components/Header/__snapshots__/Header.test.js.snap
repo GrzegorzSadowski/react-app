@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test when showButton is false 1`] = `
+<header
+  className="header"
+>
+  <h2>
+    netfilxroulette
+  </h2>
+</header>
+`;
+
+exports[`Snapshot test when showButton is true 1`] = `
+<header
+  className="header"
+>
+  <h2>
+    netfilxroulette
+  </h2>
+  <button
+    className="header--button"
+    onClick={[Function]}
+  >
+    + ADD MOVIE
+  </button>
+</header>
+`;

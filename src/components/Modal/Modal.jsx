@@ -16,7 +16,11 @@ function Modal({
     <>
       <div className="modal"></div>
       <div className="modal--container">
-        <button onClick={handleCloseModalClick} className="modal--button--x">
+        <button
+          onClick={handleCloseModalClick}
+          className="modal--button--x"
+          id="modal--button"
+        >
           &#x2716;
         </button>
         <div className="insidemodal--container">
